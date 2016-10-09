@@ -1,0 +1,32 @@
+DROP TABLE IF EXISTS `products`;
+
+CREATE TABLE `products` (
+  `itemId` int(11) NOT NULL AUTO_INCREMENT,
+  `productName` varchar(45) NOT NULL,
+  `departmentName` varchar(45) NOT NULL,
+  `price` int(11) DEFAULT '0',
+  `stockQuantity` int(11) DEFAULT '0',
+  PRIMARY KEY (`itemId`)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+
+LOCK TABLES `products` WRITE;
+
+
+INSERT INTO `products` (`itemId`, `productName`, `departmentName`, `price`, `stockQuantity`)
+VALUES
+	(1,'Cards against humanity','Toys',25,98),
+	(2,'Harry Potter Gryffindor Tie','Toys',10.99,3),
+	(3,'Shopkins S5 Mega Pack','Toys',10.00,6),
+	(4,'Fire TV stick','Electronics',39.99,57),
+	(5,'Kindle Paperwhite E reader 6 inch','Electronics',119.99,25),
+	(6,'Echo Dot','Electronics',49.99,63),
+	(7,'Fujifilm INSTAX Mini Instant Film twin pack','Photography',11.49,120),
+	(8,'Fujifilm INSTAX Mini 8 Instant Camera','Photography',50.99,1),
+	(9,'Gears of War 4 XBOX one','VideoGames',59.99,55),
+	(10,'The girl on the train book','Books',9.60,29);
+
+
+UNLOCK TABLES;
+
+
+
